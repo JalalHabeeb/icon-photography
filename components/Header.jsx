@@ -1,117 +1,74 @@
-"use client";
-import { useState } from "react";
-import { Dialog, Popover } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <header className="bg-white">
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
-      >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Icon Photography</span>
-            <Image
-              className="h-8 w-auto"
-              src="/assets/icons/logo.png"
-              alt=""
-              width={100}
-              height={100}
-            />
-          </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+    <div className="bg-white">
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <header className="mx-auto flex items-center justify-between py-4 md:mb-8 md:py-8 xl:mb-8">
           <Link
-            href="/services"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            href="/"
+            className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
+            aria-label="logo"
           >
-            Services
+            <Image src="/assets/icons/logo.png" width={100} height={100} />
           </Link>
+
+          <nav className="hidden gap-12 lg:flex">
+            <Link
+              href="/"
+              className="text-lg font-semibold text-gray-600 hover:text-amber-600"
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-amber-600 active:text-indigo-700"
+            >
+              Services
+            </Link>
+            <Link
+              href="/prices"
+              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-amber-600 active:text-indigo-700"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#"
+              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-amber-600 active:text-indigo-700"
+            >
+              About
+            </Link>
+          </nav>
+
           <Link
-            href="/prices"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            prices
-          </Link>
-          <Link
-            href="/contact-us"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            href="contact-us"
+            className="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-amber-600 hover:text-white focus-visible:ring active:text-gray-700 md:text-base lg:inline-block"
           >
             Contact Us
           </Link>
-        </Popover.Group>
-      </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Icon Photography</span>
-              <Image
-                className="h-8 w-auto"
-                src="/assets/icons/logo.png"
-                alt=""
-                width={100}
-                height={100}
-              />
-            </Link>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
+
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
             >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Link
-                  href="/services"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/prices"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Prices
-                </Link>
-                <Link
-                  href="/contact-us"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
-    </header>
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Menu
+          </button>
+        </header>
+      </div>
+    </div>
   );
 };
 
