@@ -11,7 +11,7 @@ const Header = () => {
             className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
             aria-label="logo"
           >
-            <Image src="/assets/icons/logo.png" width={100} height={100} />
+            <Image src="/assets/icons/logo.png" width={200} height={200} />
           </Link>
 
           <nav className="hidden gap-12 lg:flex">
