@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
         </section>
 
-        <div className="flex flex-col justify-around gap-2.5 sm:flex-row">
+        <div className="mt-8 flex flex-col justify-around gap-2.5 sm:flex-row">
           <Link
             href="#"
             className="inline-block rounded-lg bg-golden px-8 py-3 text-center text-sm font-semibold text-slate-900 ring-indigo-300 transition duration-100 hover:bg-slate-700 hover:text-white hover:drop-shadow-lg focus-visible:ring active:bg-indigo-700 md:text-base"
