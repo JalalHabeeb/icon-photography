@@ -22,7 +22,7 @@ const Header = () => {
               Home
             </Link>
             <Link
-              href="/services"
+              href="/our-services"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-amber-600 active:text-indigo-700"
             >
               Services
