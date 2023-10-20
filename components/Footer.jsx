@@ -10,9 +10,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div class="bg-white pt-4 sm:pt-10 lg:pt-12">
-      <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="flex flex-col items-center justify-between gap-4 border-t border-b py-6 md:flex-row">
+    <div className="bg-white pt-4 sm:pt-10 lg:pt-12">
+      <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-b py-6 md:flex-row">
           {/* <!-- logo - start --> */}
           <div>
             <Link href="/" aria-label="logo">
@@ -22,34 +22,34 @@ const Footer = () => {
           {/* <!-- logo - end --> */}
 
           {/* <!-- nav - start --> */}
-          <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
+          <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
             <Link
               href="/"
-              class="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
+              className="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
             >
               Home
             </Link>
             <Link
               href="/our-services"
-              class="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
+              className="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
             >
               Services
             </Link>
             <Link
               href="/prices"
-              class="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
+              className="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
             >
               Pricing
             </Link>
             <Link
               href="/about"
-              class="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
+              className="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
             >
               About
             </Link>
             <Link
               href="/contact-us"
-              class="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
+              className="text-gray-500 transition duration-100 hover:text-golden active:text-indigo-600"
             >
               Contact
             </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
           {/* <!-- nav - end --> */}
 
           {/* <!-- social - start --> */}
-          <div class="flex gap-4">
+          <div className="flex gap-4">
             <Link
               href="https://www.facebook.com/fadihaddadphotography/"
               target="_blank"
@@ -93,7 +93,7 @@ const Footer = () => {
           {/* <!-- social - end --> */}
         </div>
 
-        <div class="py-4 text-center text-sm text-gray-400">
+        <div className="py-4 text-center text-sm text-gray-400">
           © 2023 - Icon Photography. All rights reserved.
         </div>
       </footer>
