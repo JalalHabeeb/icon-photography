@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.corner {
-  border-radius: 42% 58% 50% 50% / 56% 26% 74% 44%;
+
+.social_links {
+  @apply text-gray-400 text-2xl transition duration-100 active:text-gray-600;
 }
