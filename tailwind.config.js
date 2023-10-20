@@ -10,9 +10,9 @@ module.exports = {
       colors: {
         golden: "#c7a951",
       },
-      // backgroundImage: {
-      //   image_border: "url('images/border.png')",
-      // },
+      screens: {
+        xsm: { max: "600px" },
+      },
     },
   },
   plugins: [],

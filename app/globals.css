@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  border: 5px solid #c7a951;
+  margin: 1rem;
+  padding: 2rem;
+}
+
 .social_links {
   @apply text-gray-400 text-2xl transition duration-100 active:text-gray-600;
 }
